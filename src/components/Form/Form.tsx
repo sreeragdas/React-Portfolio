@@ -1,0 +1,118 @@
+import { Container, ContainerSucces } from './styles'
+import { useForm, ValidationError } from '@formspree/react'
+import { toast, ToastContainer } from 'react-toastify'
+import emailjs from 'emailjs-com'
+import { useEffect, useState } from 'react'
+import validator from 'validator'
+
+export function Form() {
+  const [state, handleSubmit] = useForm('xknkpqry')
+  const [validEmail, setValidEmail] = useState(false)
+  const [isHuman, setIsHuman] = useState(false)
+  const [message, setMessage] = useState('')
+  function verifyEmail(email: string) {
+    if (validator.isEmail(email)) {
+      setValidEmail(true)
+    } else {
+      setValidEmail(false)
+    }
+  }
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success('Email successfully sent!', {
+        position: toast.POSITION.BOTTOM_LEFT,
+        pauseOnFocusLoss: false,
+        closeOnClick: true,
+        hideProgressBar: false,
+        toastId: 'succeeded',
+      })
+    }
+  })
+  if (state.succeeded) {
+    return (
+      <ContainerSucces>
+        <h3>Thanks for getting in touch!</h3>
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }}
+        >
+          Back to the top
+        </button>
+        <ToastContainer />
+      </ContainerSucces>
+    )
+  }
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm( 'service_i0t0mbs', 'template_dc7aznu', e.target, 'I2ulnlXyWwAERK-M1')
+      .then(
+        (result : any) => {
+          console.log('Email successfully sent!', result.text);
+          // Handle success, e.g., display success message
+          toast.success('Email successfully sent!', {
+            position: toast.POSITION.BOTTOM_LEFT,
+            pauseOnFocusLoss: false,
+            closeOnClick: true,
+            hideProgressBar: false,
+            toastId: 'succeeded',
+          });
+        },
+        (error :any) => {
+          console.error('Email sending failed:', error.text);
+          // Handle error, e.g., display error message
+          toast.error('Failed to send email. Please try again later.', {
+            position: toast.POSITION.BOTTOM_LEFT,
+            pauseOnFocusLoss: false,
+            closeOnClick: true,
+            hideProgressBar: false,
+            toastId: 'failed',
+          });
+        }
+      );
+  };
+
+  return (
+    <Container>
+      <h2>Get in touch using the form</h2>
+      <form onSubmit={sendEmail}>
+        <input
+          placeholder="Email"
+          id="email"
+          type="email"
+          name="email"
+          onChange={(e) => {
+            verifyEmail(e.target.value)
+          }}
+          required
+        />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
+        <textarea
+          required
+          placeholder="Send a message to get started."
+          id="message"
+          name="message"
+          onChange={(e) => {
+            setMessage(e.target.value)
+          }}
+        />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
+       
+        <button
+          type="submit"
+        
+        >
+          Submit
+        </button>
+      </form>
+      <ToastContainer />
+    </Container>
+  )
+}
