@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://github.com/sreeragdas/React-Portfolio",
+  "homepage": "https://sreeragdas.github.io/React-Portfolio",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@formspree/react": "^2.2.4",
