@@ -73,7 +73,7 @@ export function Project() {
         </ScrollAnimation>
 
         <ScrollAnimation animateIn="flipInX">
-          <div className="project">
+          <div className="project" style={{width:'400px'}}>
             <header>
               <div>
               <h3>Dialogue.ai</h3>
