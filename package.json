@@ -5,6 +5,8 @@
   "homepage": "https://sreeragdas.github.io/React-Portfolio",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@formspree/react": "^2.2.4",
     "@mui/icons-material": "^5.16.0",
     "@testing-library/jest-dom": "^5.14.1",
@@ -20,6 +22,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^17.0.2",
     "react-google-recaptcha": "^2.1.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.2.1",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1",
