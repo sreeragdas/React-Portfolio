@@ -22,9 +22,9 @@ export function Project() {
               </div>
             </header>
             <div className="body">
-              <h3>Medimaze-PACS (Primary Agricultural Credit Societies ) </h3>
+              <h3>PACS-Viewer (Picture Archiving and and Communication System) </h3>
               <p>
-              Designed a PACS Viewer to transform medical image interpretation and analysis. Leveraging Cornerstone.js, I enhanced image loading speed by 60% and improved user interface responsiveness. Additionally, I integrated OAuth for secure access, introduced DICOM report generation, and enabled TMTV mode for advanced tumor volume analysis, driving a 50% increase in diagnostic precision.
+              Designed a PACS Viewer with Cornerstone.js, enhancing image loading speed by 60%, improving UI responsiveness, integrating OAuth, enabling DICOM report generation, and TMTV mode, resulting in a 50% increase in diagnostic precision.
               </p>
             </div>
             <footer>
@@ -50,8 +50,7 @@ export function Project() {
             <div className="body">
               <h3>Dialogue.ai</h3>
               <p>
-              AI accessibility was revitalized through the transformation of Dialogue.ai, unveiling a secure platform tailored for customized file interactions. Spearheading robust UI design led to a 30% increase in user engagement, while integration of frontend functionalities with Django APIs resulted in a 40% performance improvement through seamless teamwork and collaboration. Utilization of React Js, Mobx, and Typescript technologies democratized AI-powered data analysis, catering to users of all technical proficiency levels.
-              </p>
+              Revitalized AI accessibility with Dialogue.ai, creating a secure platform for custom file interactions. Led UI design, increasing user engagement by 30%, and integrated Django APIs, boosting performance by 40%. Utilized React JS, Mobx, and TypeScript to democratize AI-powered data analysis for all user proficiency levels.              </p>
             </div>
             <footer>
               <ul className="tech-list">
@@ -74,8 +73,7 @@ export function Project() {
             <div className="body">
               <h3>Gym Application</h3>
               <p>
-              Designed and developed a gym application featuring personalized workout plans, progress tracking, and nutrition guidance. Employed robust programming languages to ensure seamless functionality across various platforms. Ensured user-friendly interfaces and incorporated feedback-driven updates for continuous improvement.
-              </p>
+              Designed and developed a gym app with personalized workout plans, progress tracking, and nutrition guidance. Ensured cross-platform functionality, user-friendly interfaces, and continuous improvements through feedback-driven updates.              </p>
             </div>
             <footer>
               <ul className="tech-list">
@@ -101,8 +99,8 @@ export function Project() {
             <div className="body">
               <h3>Dream Traveller - Website</h3>
               <p>
-              Crafted an immersive Dream Traveller website offering curated travel experiences worldwide. Seamlessly blending captivating visuals, user-friendly navigation, and personalized recommendations to inspire unforgettable journeys. Leveraged innovative technologies for seamless booking and exploration
-              </p>
+
+              Crafted the Dream Traveller website with curated global travel experiences, captivating visuals, user-friendly navigation, and personalized recommendations. Leveraged innovative technologies for seamless booking and exploration.              </p>
             </div>
             <footer>
               <ul className="tech-list">
